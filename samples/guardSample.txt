@@ -1,0 +1,4 @@
+guard let name = queryString.substring(queryPrefix.utf8.count) else {
+                            return Response(statusLine: "400 OK", body: "Query string is unknown. Expected"
+                                    + " '\(queryPrefix)<test_name>'.")
+                        }

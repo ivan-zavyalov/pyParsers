@@ -1,0 +1,5 @@
+let a: Int? = 1
+let b: String = "test"
+let instance: Classname = new Classname()
+let text = "text"
+let test = 1.5
