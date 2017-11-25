@@ -1,11 +1,26 @@
 import Parser
 from parsers.swift.ImmutableParser import ImmutableParser
 from parsers.swift.ParserTypes import ParserTypes
+from pygments.lexers.objective import SwiftLexer
+from pygments import lex
+
 
 class SwiftParser(Parser.Parser):
     def __init__(self):
         super().__init__()
         self.data = []
+        self.lexemAnalyzer = SwiftLexer()
+
+    def analyzeAll(self, allstrings):
+        output = []
+        for line in allstrings:
+            output.append(self.analyzeString(line))
+
+    def analyzeString(self, inputline):
+        tokens = lex(inputline)
+        for token in tokens:
+            t = token
+        return 'test'
 
     def parse(self, tokensarray):
         skip = False

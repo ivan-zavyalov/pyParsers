@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestSuite group="SheetReportSightActionMenu">
+    <Test name="AddColumnCanAddDropdownList" group="All" id="C48450"><!-- Test ID: C48450 -->
+        <Action name="Auth.logout" />
+        <Action name="Common.replayFixture" parameters="AddColumnCanAddDropdownList" />
+        <Action name="Auth.login" parameters="bim00074@gmail.com,qwerty" />
+        <Action name="Home.openSheet" parameters="New Sheet" />
+        <Action name="Sheet.switchToListView" />
+        <Action name="SheetList.openMenu" />
+        <Action name="Sheet.menuEditColumnProperties" />
+        <Action name="EditColumnProperties.addColumn" />
+        <Action name="ColumnProperties.setName" parameters="DropdownList" />
+        <Action name="ColumnProperties.openDropdownList" />
+        <Action name="DropdownList.back" />
+        <Action name="ColumnProperties.save" />
+        <Action name="EditColumnProperties.cancel" />
+        <Action name="Sheet.refresh" />
+        <Action name="SheetList.openMenu" />
+        <Action name="Sheet.menuEditColumnProperties" />
+        <Action name="EditColumnProperties.editColumn" parameters="DropdownList" />
+        <Action name="ColumnProperties.setName" parameters="NewDropdownList" />
+        <Action name="ColumnProperties.save" />
+        <Action name="Auth.logout" />
+    </Test>
+</TestSuite>
